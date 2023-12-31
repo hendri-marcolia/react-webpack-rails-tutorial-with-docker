@@ -18,10 +18,10 @@ RUN apt-get install -y redis
 RUN npm install -g yarn
 
 # Copy application code
-COPY . .
+# COPY . .
 
-RUN yarn
-RUN yarn res:dev
+# RUN yarn
+# RUN yarn res:dev
 
 # Expose port 3000
 EXPOSE 3000
@@ -30,5 +30,5 @@ EXPOSE 3000
 # RUN rake db:setup
 
 # CMD ["rails", "server", "-b", "0.0.0.0"]
-CMD [ "foreman", "start", "-f", "Procfile.dev" ]
+# CMD [ "foreman", "start", "-f", "Procfile.dev" ]
 # CMD ["ruby", "bin/dev"]
